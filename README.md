@@ -18,3 +18,11 @@ My work is going to be a layer above git...i'll use git to perform the final tas
 Im thinking of building this in c++ or golang...not exactly sure
 I wrote golang in my resume, but like, it's been a while since i practiced it, so, I don't really have a lot of confidence in it right now.
 Meanwhile, c++ also seems like a good choice...also i'll end up learning oop in c++ cuz of it.
+
+
+## Approach
+IDK what I wrote above, but here's what im going to do
+1. A central server, will run brogit. It will recieve all the commands to read/write stuff from the clients.
+2. I want to do it in GoLang
+3. The brogit daemon will store all the diffs from all the users, till the admin runs the commit command. Then, brogit will retrace all the commands, and will make batches/groups of all the commands, that were written by the same user, in the same file. Then, if there's a change in order, it will do all the pushes and pulls, to/from the other users branch, and then, make the changes there. So, it will literally follow things sequentially. In the end, it will push the stuff to the final main branch. 
+4. Another simpler thing im thinking of rn, is to have all the users commits in their branch, and once we need to switch, we can push everything to a separate development branch, and then, from there, all the users can keep pulling. But, this could cause a bunch of merge conflicts...maybe...got to think properly. Or, need to keep syncing all the branches...
